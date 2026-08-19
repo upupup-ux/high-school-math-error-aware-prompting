@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # embed_vectors.py
 from sentence_transformers import SentenceTransformer
 import json
