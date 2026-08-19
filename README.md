@@ -57,7 +57,7 @@ Before running experiments, you need to prepare the following data files.
 - **Error database:** JSONL file with fields: `problem`, `steps`, `model_output`, `answer`
 - **Test set:** JSONL file with fields: `problem`, `answer`
 
-The provided `Data/balance_960_test.jsonl` and `Data/sampled_test_400.jsonl` are ready to use.
+The provided files correspond to the benchmark and EAP evaluation split used in our experiments.
 
 ### 2. Generate Problem Summaries (for EAP-Summary)
 
@@ -122,7 +122,7 @@ The three stages are designed to be run sequentially:
 python stage1_basic_inference.py --model qwen7b --test_file Data/balance_960_test.jsonl
 ```
 
-- Available models: `qwen1.5b`, `qwen7b`, `deepseek-math`, `deepseek-v3`
+- Available models: Qwen2.5-Math-1.5B-Instruct, Qwen2.5-Math-7B-Instruct, DeepSeekMath-7B-Instruct, DeepSeek-V3
 - The output will be saved in `./outputs/` as `<model>_960_output.jsonl`
 
 ### Stage 2: Error Annotation
@@ -195,12 +195,6 @@ The same applies to `stage1_basic_inference.py` and `stage2_annotate_errors.py`.
 ## Citation
 
 If you use this code, please cite the corresponding paper (details to be added).
-
----
-
-## License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
 
